@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Header/>
       <div className='card text-white bg-secondary my-2 text-center'>
-        <h1 className=''>Welcome You to PartnerPro! </h1>
+        <h1 className=''>Welcome You to PartnerPro...... </h1>
         <p className='p-3 fs-6'> “We're here to connect individuals with shared goals and passions, 
           empowering you to make a difference together. Whether you're looking to 
           build a community garden, launch a charity initiative, or tackle a global 
