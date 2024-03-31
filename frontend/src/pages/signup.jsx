@@ -17,8 +17,8 @@ import { Radio } from '@mui/material';
 import { FormControl, FormLabel } from '@mui/material';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { validateEmail, validatePassword } from '../components/functions.js';
-import Header from '../components/header.js';
+import { validateEmail, validatePassword } from '../components/functions.jsx';
+import Header from '../components/header.jsx';
 
 const defaultTheme = createTheme();
 
