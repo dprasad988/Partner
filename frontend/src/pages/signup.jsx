@@ -58,7 +58,7 @@ export default function SignUp() {
       return;
     }
 
-    axios.post('http://localhost:5005/signup', formData) // Send POST request to backend
+    axios.post('http://localhost:5005/registerRouter/signup', formData) // Send POST request to backend
       .then(res => {
         console.log(res); // Log response data to the console
         if (res.status === 200) {

@@ -11,7 +11,7 @@ import axios from 'axios';
       const headers = { Authorization: localStorage.getItem('jwtToken') };
   
       // Send a POST request to the server-side logout endpoint
-      await axios.post('http://localhost:5005/logout', null, { headers });
+      await axios.post('http://localhost:5005/logoutRouter/logout', null, { headers });
   
       console.log('Server-side logout successful');
   

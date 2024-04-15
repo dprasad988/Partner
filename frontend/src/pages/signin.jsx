@@ -48,7 +48,7 @@ export default function SignIn() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:5005/signin', formData)
+    axios.post('http://localhost:5005/signInRouter/signin', formData)
       .then(res => {
         const { token } = res.data;
         localStorage.setItem('jwtToken', token);
@@ -119,7 +119,7 @@ export default function SignIn() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link href="http://localhost:3000/forgot-password" variant="body2">
                   Forgot password?
                 </Link>
               </Grid>
