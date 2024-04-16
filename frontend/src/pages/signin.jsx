@@ -48,7 +48,7 @@ export default function SignIn() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:5005/signInRouter/signin', formData)
+    axios.post('https://us-central1-partnerpro-520d5.cloudfunctions.net/api/registerRouter/signin', formData)
       .then(res => {
         const { token } = res.data;
         localStorage.setItem('jwtToken', token);
