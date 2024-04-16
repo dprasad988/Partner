@@ -1,0 +1,392 @@
+[debug] [2024-04-16T12:19:59.904Z] ----------------------------------------------------------------------
+[debug] [2024-04-16T12:19:59.908Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2024-04-16T12:19:59.909Z] CLI Version:   13.7.2
+[debug] [2024-04-16T12:19:59.909Z] Platform:      win32
+[debug] [2024-04-16T12:19:59.910Z] Node Version:  v20.11.1
+[debug] [2024-04-16T12:19:59.910Z] Time:          Tue Apr 16 2024 17:49:59 GMT+0530 (India Standard Time)
+[debug] [2024-04-16T12:19:59.910Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-16T12:20:00.050Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-16T12:20:00.051Z] > authorizing via signed-in user (dhammika1204@gmail.com)
+[debug] [2024-04-16T12:20:00.051Z] [iam] checking project partnerpro-520d5 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-04-16T12:20:00.056Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/partnerpro-520d5:testIamPermissions [none]
+[debug] [2024-04-16T12:20:00.056Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/partnerpro-520d5:testIamPermissions x-goog-quota-user=projects/partnerpro-520d5
+[debug] [2024-04-16T12:20:00.057Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/partnerpro-520d5:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-04-16T12:20:02.307Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/partnerpro-520d5:testIamPermissions 200
+[debug] [2024-04-16T12:20:02.309Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/partnerpro-520d5:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-04-16T12:20:02.311Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/partnerpro-520d5/serviceAccounts/partnerpro-520d5@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-04-16T12:20:02.311Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/partnerpro-520d5/serviceAccounts/partnerpro-520d5@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-04-16T12:20:04.327Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/partnerpro-520d5/serviceAccounts/partnerpro-520d5@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-04-16T12:20:04.328Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/partnerpro-520d5/serviceAccounts/partnerpro-520d5@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'partnerpro-520d5'...
+[info] 
+[info] i  deploying functions 
+[debug] [2024-04-16T12:20:04.336Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/partnerpro-520d5 [none]
+[debug] [2024-04-16T12:20:05.047Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/partnerpro-520d5 200
+[debug] [2024-04-16T12:20:05.048Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/partnerpro-520d5 {"projectId":"partnerpro-520d5","projectNumber":"1028475339589","displayName":"PartnerPro","name":"projects/partnerpro-520d5","resources":{"hostingSite":"partnerpro-520d5","storageBucket":"partnerpro-520d5.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_3ca17052-1026-4bc1-908d-52117660f070"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-04-16T12:20:05.058Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-04-16T12:20:05.059Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/partnerpro-520d5
+[debug] [2024-04-16T12:20:05.064Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-04-16T12:20:05.065Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/partnerpro-520d5
+[debug] [2024-04-16T12:20:05.070Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudbuild.googleapis.com [none]
+[debug] [2024-04-16T12:20:05.070Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudbuild.googleapis.com x-goog-quota-user=projects/partnerpro-520d5
+[debug] [2024-04-16T12:20:05.075Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/artifactregistry.googleapis.com [none]
+[debug] [2024-04-16T12:20:05.075Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/artifactregistry.googleapis.com x-goog-quota-user=projects/partnerpro-520d5
+[debug] [2024-04-16T12:20:07.151Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudbuild.googleapis.com 200
+[debug] [2024-04-16T12:20:07.152Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-04-16T12:20:07.169Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudfunctions.googleapis.com 200
+[debug] [2024-04-16T12:20:07.170Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-04-16T12:20:07.183Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/artifactregistry.googleapis.com 200
+[debug] [2024-04-16T12:20:07.184Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-04-16T12:20:07.197Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/runtimeconfig.googleapis.com 200
+[debug] [2024-04-16T12:20:07.198Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-04-16T12:20:07.199Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/partnerpro-520d5/adminSdkConfig [none]
+[debug] [2024-04-16T12:20:08.937Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/partnerpro-520d5/adminSdkConfig 200
+[debug] [2024-04-16T12:20:08.938Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/partnerpro-520d5/adminSdkConfig {"projectId":"partnerpro-520d5","storageBucket":"partnerpro-520d5.appspot.com","locationId":"us-central"}
+[debug] [2024-04-16T12:20:08.941Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/partnerpro-520d5/configs [none]
+[debug] [2024-04-16T12:20:09.857Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/partnerpro-520d5/configs 200
+[debug] [2024-04-16T12:20:09.858Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/partnerpro-520d5/configs {}
+[debug] [2024-04-16T12:20:09.866Z] Validating nodejs source
+[debug] [2024-04-16T12:20:11.644Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "type": "module",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "nodemon index.js",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "firebase": "^10.11.0",
+    "firebase-admin": "^11.11.1",
+    "firebase-functions": "^4.9.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.13",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-16T12:20:11.645Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2024-04-16T12:20:11.647Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-16T12:20:11.663Z] Found firebase-functions binary at 'C:\Users\user\OneDrive\Desktop\PartnerPro Project\PartnerPro\backend\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8242
+
+[debug] [2024-04-16T12:20:12.872Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[error] (node:15544) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::8242
+    at Server.setupListenHandle [as _listen2] (node:net:1872:16)
+    at listenInCluster (node:net:1920:12)
+    at Server.listen (node:net:2008:7)
+    at Function.listen (C:\Users\user\OneDrive\Desktop\PartnerPro Project\PartnerPro\backend\functions\node_modules\express\lib\application.js:635:24)
+    at file:///C:/Users/user/OneDrive/Desktop/PartnerPro%20Project/PartnerPro/backend/functions/index.js:33:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async importModuleDynamicallyWrapper (node:internal/vm/module:431:15)
+    at async loadModule (C:\Users\user\OneDrive\Desktop\PartnerPro Project\PartnerPro\backend\functions\node_modules\firebase-functions\lib\runtime\loader.js:48:20)
+    at async loadStack (C:\Users\user\OneDrive\Desktop\PartnerPro Project\PartnerPro\backend\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:17)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1899:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 8242
+}
+
+Node.js v20.11.1
+
+[debug] [2024-04-16T12:20:12.889Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8242/__/quitquitquit failed, reason:  {"message":"request to http://localhost:8242/__/quitquitquit failed, reason: ","type":"system","errno":"ECONNREFUSED","code":"ECONNREFUSED"}
+[debug] [2024-04-16T12:20:12.896Z] Failed to validate key PORT: Error: Key PORT is reserved for internal use.
+[error] Error: Failed to load environment variables from .env.:
+[error] - Error Key PORT is reserved for internal use.
+[debug] [2024-04-16T12:27:19.259Z] ----------------------------------------------------------------------
+[debug] [2024-04-16T12:27:19.263Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2024-04-16T12:27:19.264Z] CLI Version:   13.7.2
+[debug] [2024-04-16T12:27:19.264Z] Platform:      win32
+[debug] [2024-04-16T12:27:19.265Z] Node Version:  v20.11.1
+[debug] [2024-04-16T12:27:19.265Z] Time:          Tue Apr 16 2024 17:57:19 GMT+0530 (India Standard Time)
+[debug] [2024-04-16T12:27:19.265Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-16T12:27:19.439Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-16T12:27:19.440Z] > authorizing via signed-in user (dhammika1204@gmail.com)
+[debug] [2024-04-16T12:27:19.441Z] [iam] checking project partnerpro-520d5 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-04-16T12:27:19.446Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/partnerpro-520d5:testIamPermissions [none]
+[debug] [2024-04-16T12:27:19.446Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/partnerpro-520d5:testIamPermissions x-goog-quota-user=projects/partnerpro-520d5
+[debug] [2024-04-16T12:27:19.447Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/partnerpro-520d5:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-04-16T12:27:21.826Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/partnerpro-520d5:testIamPermissions 200
+[debug] [2024-04-16T12:27:21.828Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/partnerpro-520d5:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-04-16T12:27:21.830Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/partnerpro-520d5/serviceAccounts/partnerpro-520d5@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-04-16T12:27:21.830Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/partnerpro-520d5/serviceAccounts/partnerpro-520d5@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-04-16T12:27:23.981Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/partnerpro-520d5/serviceAccounts/partnerpro-520d5@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-04-16T12:27:23.981Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/partnerpro-520d5/serviceAccounts/partnerpro-520d5@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'partnerpro-520d5'...
+[info] 
+[info] i  deploying functions 
+[debug] [2024-04-16T12:27:23.999Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/partnerpro-520d5 [none]
+[debug] [2024-04-16T12:27:24.765Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/partnerpro-520d5 200
+[debug] [2024-04-16T12:27:24.766Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/partnerpro-520d5 {"projectId":"partnerpro-520d5","projectNumber":"1028475339589","displayName":"PartnerPro","name":"projects/partnerpro-520d5","resources":{"hostingSite":"partnerpro-520d5","storageBucket":"partnerpro-520d5.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_3ca17052-1026-4bc1-908d-52117660f070"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-04-16T12:27:24.777Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-04-16T12:27:24.778Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/partnerpro-520d5
+[debug] [2024-04-16T12:27:24.785Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-04-16T12:27:24.786Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/partnerpro-520d5
+[debug] [2024-04-16T12:27:24.793Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudbuild.googleapis.com [none]
+[debug] [2024-04-16T12:27:24.794Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudbuild.googleapis.com x-goog-quota-user=projects/partnerpro-520d5
+[debug] [2024-04-16T12:27:24.798Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/artifactregistry.googleapis.com [none]
+[debug] [2024-04-16T12:27:24.799Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/artifactregistry.googleapis.com x-goog-quota-user=projects/partnerpro-520d5
+[debug] [2024-04-16T12:27:25.780Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/runtimeconfig.googleapis.com 200
+[debug] [2024-04-16T12:27:25.781Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-04-16T12:27:26.875Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudbuild.googleapis.com 200
+[debug] [2024-04-16T12:27:26.875Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-04-16T12:27:26.896Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudfunctions.googleapis.com 200
+[debug] [2024-04-16T12:27:26.896Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-04-16T12:27:26.919Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/artifactregistry.googleapis.com 200
+[debug] [2024-04-16T12:27:26.920Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/partnerpro-520d5/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-04-16T12:27:26.923Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/partnerpro-520d5/adminSdkConfig [none]
+[debug] [2024-04-16T12:27:29.723Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/partnerpro-520d5/adminSdkConfig 200
+[debug] [2024-04-16T12:27:29.724Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/partnerpro-520d5/adminSdkConfig {"projectId":"partnerpro-520d5","storageBucket":"partnerpro-520d5.appspot.com","locationId":"us-central"}
+[debug] [2024-04-16T12:27:29.726Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/partnerpro-520d5/configs [none]
+[debug] [2024-04-16T12:27:30.491Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/partnerpro-520d5/configs 200
+[debug] [2024-04-16T12:27:30.491Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/partnerpro-520d5/configs {}
+[debug] [2024-04-16T12:27:30.495Z] Validating nodejs source
+[debug] [2024-04-16T12:27:33.299Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "type": "module",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "nodemon index.js",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "firebase": "^10.11.0",
+    "firebase-admin": "^11.11.1",
+    "firebase-functions": "^4.9.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.13",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-04-16T12:27:33.300Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2024-04-16T12:27:33.308Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-04-16T12:27:33.351Z] Found firebase-functions binary at 'C:\Users\user\OneDrive\Desktop\PartnerPro Project\PartnerPro\backend\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8851
+
+[debug] [2024-04-16T12:27:34.591Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[error] (node:6620) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5005
+    at Server.setupListenHandle [as _listen2] (node:net:1872:16)
+    at listenInCluster (node:net:1920:12)
+    at Server.listen (node:net:2008:7)
+    at Function.listen (C:\Users\user\OneDrive\Desktop\PartnerPro Project\PartnerPro\backend\functions\node_modules\express\lib\application.js:635:24)
+    at file:///C:/Users/user/OneDrive/Desktop/PartnerPro%20Project/PartnerPro/backend/functions/index.js:33:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:329:24)
+    at async importModuleDynamicallyWrapper (node:internal/vm/module:431:15)
+    at async loadModule (C:\Users\user\OneDrive\Desktop\PartnerPro Project\PartnerPro\backend\functions\node_modules\firebase-functions\lib\runtime\loader.js:48:20)
+    at async loadStack (C:\Users\user\OneDrive\Desktop\PartnerPro Project\PartnerPro\backend\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:17)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1899:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 5005
+}
+
+Node.js v20.11.1
+
+[debug] [2024-04-16T12:27:34.616Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8851/__/quitquitquit failed, reason:  {"message":"request to http://localhost:8851/__/quitquitquit failed, reason: ","type":"system","errno":"ECONNREFUSED","code":"ECONNREFUSED"}
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\user\OneDrive\Desktop\PartnerPro Project\PartnerPro\backend\functions (85.68 KB) for uploading 
+[debug] [2024-04-16T12:27:34.812Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/partnerpro-520d5/locations/-/functions [none]
+[debug] [2024-04-16T12:27:36.333Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/partnerpro-520d5/locations/-/functions 200
+[debug] [2024-04-16T12:27:36.333Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/partnerpro-520d5/locations/-/functions {}
+[debug] [2024-04-16T12:27:36.340Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/partnerpro-520d5/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-04-16T12:27:37.355Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/partnerpro-520d5/locations/-/functions 200
+[debug] [2024-04-16T12:27:37.356Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/partnerpro-520d5/locations/-/functions {}
+[debug] [2024-04-16T12:27:37.367Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/partnerpro-520d5 [none]
+[debug] [2024-04-16T12:27:37.986Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/partnerpro-520d5 200
+[debug] [2024-04-16T12:27:37.989Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/partnerpro-520d5 {"projectId":"partnerpro-520d5","projectNumber":"1028475339589","displayName":"PartnerPro","name":"projects/partnerpro-520d5","resources":{"hostingSite":"partnerpro-520d5","storageBucket":"partnerpro-520d5.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_3ca17052-1026-4bc1-908d-52117660f070"}
+[debug] [2024-04-16T12:27:37.993Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2024-04-16T12:27:37.994Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/partnerpro-520d5:testIamPermissions [none]
+[debug] [2024-04-16T12:27:37.994Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/partnerpro-520d5:testIamPermissions x-goog-quota-user=projects/partnerpro-520d5
+[debug] [2024-04-16T12:27:37.994Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/partnerpro-520d5:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2024-04-16T12:27:39.576Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/partnerpro-520d5:testIamPermissions 200
+[debug] [2024-04-16T12:27:39.576Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/partnerpro-520d5:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2024-04-16T12:27:39.576Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2024-04-16T12:27:39.579Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/partnerpro-520d5/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2024-04-16T12:27:39.579Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/partnerpro-520d5/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2024-04-16T12:27:51.691Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/partnerpro-520d5/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2024-04-16T12:27:51.691Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/partnerpro-520d5/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-187208294973.us-central1.cloudfunctions.appspot.com/ec85feff-fdf9-4539-90b8-1bf728ec1677.zip?GoogleAccessId=service-1028475339589@gcf-admin-robot.iam.gserviceaccount.com&Expires=1713272271&Signature=oiKANHnunNCxdzRtYaK7k5AHX1%2FjWyUaY6VJ1cl8BZ%2BUnALkXxwcM9WqPUDWRUDId%2FIszYuEIpDOC3EPgmLZseVcsNco95ZEZTbkVa%2FbNHQ%2B78mj0hQ9os1F94sz8nY2tlpcheT1KIjLflEdN47unQX0UH5zCUDvaeia5TwizmoCnUZRh3sTwG6Ds%2FhE%2BvKKqXE3VhTy3i%2B68KBWIHJxcqmCjvsMe18ZA299O2cXSZBqrlXfnG97E%2Fh7Oz%2F19mCXubk5wx1TEUIj63K%2B3K%2BK39WurWSgiWzgEuWD9ELw8Z8aNE864Fjn%2B5PWRQNIua1rtMrIZ3SQ2ZNqpGeca05XEQ%3D%3D"}
+[debug] [2024-04-16T12:27:51.695Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-187208294973.us-central1.cloudfunctions.appspot.com/ec85feff-fdf9-4539-90b8-1bf728ec1677.zip GoogleAccessId=service-1028475339589%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1713272271&Signature=oiKANHnunNCxdzRtYaK7k5AHX1%2FjWyUaY6VJ1cl8BZ%2BUnALkXxwcM9WqPUDWRUDId%2FIszYuEIpDOC3EPgmLZseVcsNco95ZEZTbkVa%2FbNHQ%2B78mj0hQ9os1F94sz8nY2tlpcheT1KIjLflEdN47unQX0UH5zCUDvaeia5TwizmoCnUZRh3sTwG6Ds%2FhE%2BvKKqXE3VhTy3i%2B68KBWIHJxcqmCjvsMe18ZA299O2cXSZBqrlXfnG97E%2Fh7Oz%2F19mCXubk5wx1TEUIj63K%2B3K%2BK39WurWSgiWzgEuWD9ELw8Z8aNE864Fjn%2B5PWRQNIua1rtMrIZ3SQ2ZNqpGeca05XEQ%3D%3D
+[debug] [2024-04-16T12:27:51.695Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-187208294973.us-central1.cloudfunctions.appspot.com/ec85feff-fdf9-4539-90b8-1bf728ec1677.zip [stream]
+[debug] [2024-04-16T12:27:53.121Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-187208294973.us-central1.cloudfunctions.appspot.com/ec85feff-fdf9-4539-90b8-1bf728ec1677.zip 200
+[debug] [2024-04-16T12:27:53.121Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-187208294973.us-central1.cloudfunctions.appspot.com/ec85feff-fdf9-4539-90b8-1bf728ec1677.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 20 (1st Gen) function api(us-central1)... 
+[debug] [2024-04-16T12:27:53.139Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/partnerpro-520d5/locations/us-central1/functions [none]
+[debug] [2024-04-16T12:27:53.139Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/partnerpro-520d5/locations/us-central1/functions {"name":"projects/partnerpro-520d5/locations/us-central1/functions/api","sourceUploadUrl":"https://storage.googleapis.com/uploads-187208294973.us-central1.cloudfunctions.appspot.com/ec85feff-fdf9-4539-90b8-1bf728ec1677.zip?GoogleAccessId=service-1028475339589@gcf-admin-robot.iam.gserviceaccount.com&Expires=1713272271&Signature=oiKANHnunNCxdzRtYaK7k5AHX1%2FjWyUaY6VJ1cl8BZ%2BUnALkXxwcM9WqPUDWRUDId%2FIszYuEIpDOC3EPgmLZseVcsNco95ZEZTbkVa%2FbNHQ%2B78mj0hQ9os1F94sz8nY2tlpcheT1KIjLflEdN47unQX0UH5zCUDvaeia5TwizmoCnUZRh3sTwG6Ds%2FhE%2BvKKqXE3VhTy3i%2B68KBWIHJxcqmCjvsMe18ZA299O2cXSZBqrlXfnG97E%2Fh7Oz%2F19mCXubk5wx1TEUIj63K%2B3K%2BK39WurWSgiWzgEuWD9ELw8Z8aNE864Fjn%2B5PWRQNIua1rtMrIZ3SQ2ZNqpGeca05XEQ%3D%3D","entryPoint":"api","runtime":"nodejs20","dockerRegistry":"ARTIFACT_REGISTRY","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"1e3b622cd7fccfaece0d16fa03de3fd8e2542d6d"},"httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"minInstances":null,"maxInstances":null,"ingressSettings":null,"environmentVariables":{"API_PORT":"5005","FIREBASE_CONFIG":"{\"projectId\":\"partnerpro-520d5\",\"storageBucket\":\"partnerpro-520d5.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"partnerpro-520d5","EVENTARC_CLOUD_EVENT_SOURCE":"projects/partnerpro-520d5/locations/us-central1/functions/api"},"serviceAccountEmail":null,"availableMemoryMb":null,"timeout":null,"vpcConnector":null,"vpcConnectorEgressSettings":null,"buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}}
+[debug] [2024-04-16T12:27:53.945Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/partnerpro-520d5/locations/us-central1/functions 403
+[debug] [2024-04-16T12:27:53.945Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/partnerpro-520d5/locations/us-central1/functions {"error":{"code":403,"message":"Unable to retrieve the repository metadata for projects/partnerpro-520d5/locations/us-central1/repositories/gcf-artifacts. Ensure that the Cloud Functions service account has 'artifactregistry.repositories.list' and 'artifactregistry.repositories.get' permissions. You can add the permissions by granting the role 'roles/artifactregistry.reader'.","status":"PERMISSION_DENIED"}}
+[warn] !  functions: failed to create function projects/partnerpro-520d5/locations/us-central1/functions/api 
+[error] Failed to create function projects/partnerpro-520d5/locations/us-central1/functions/api
+[debug] [2024-04-16T12:27:53.970Z] Total Function Deployment time: 823
+[debug] [2024-04-16T12:27:53.970Z] 1 Functions Deployed
+[debug] [2024-04-16T12:27:53.971Z] 1 Functions Errored
+[debug] [2024-04-16T12:27:53.971Z] 0 Function Deployments Aborted
+[debug] [2024-04-16T12:27:53.971Z] Average Function Deployment time: 820
+[info] 
+[info] Functions deploy had errors with the following functions:
+	api(us-central1)
+[debug] [2024-04-16T12:27:54.598Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2024-04-16T12:27:54.605Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/partnerpro-520d5/locations/us-central1/repositories/gcf-artifacts/packages/api [none]
+[debug] [2024-04-16T12:27:54.609Z] >>> [apiv2][query] GET https://us.gcr.io/v2/partnerpro-520d5/gcf/us-central1/tags/list [none]
+[debug] [2024-04-16T12:27:56.306Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/partnerpro-520d5/locations/us-central1/repositories/gcf-artifacts/packages/api 404
+[debug] [2024-04-16T12:27:56.306Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/partnerpro-520d5/locations/us-central1/repositories/gcf-artifacts/packages/api {"error":{"code":404,"message":"Package \"projects/partnerpro-520d5/locations/us-central1/repositories/gcf-artifacts/packages/api\" was not found.","status":"NOT_FOUND"}}
+[debug] [2024-04-16T12:27:57.104Z] <<< [apiv2][status] GET https://us.gcr.io/v2/partnerpro-520d5/gcf/us-central1/tags/list 404
+[debug] [2024-04-16T12:27:57.104Z] <<< [apiv2][body] GET https://us.gcr.io/v2/partnerpro-520d5/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-04-16T12:27:57.104Z] Failed docker command with error  HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Not Found","status":404}
+[debug] [2024-04-16T12:27:57.124Z] >>> [apiv2][query] GET https://us.gcr.io/v2/partnerpro-520d5/gcf/us-central1/tags/list [none]
+[debug] [2024-04-16T12:27:57.629Z] <<< [apiv2][status] GET https://us.gcr.io/v2/partnerpro-520d5/gcf/us-central1/tags/list 404
+[debug] [2024-04-16T12:27:57.629Z] <<< [apiv2][body] GET https://us.gcr.io/v2/partnerpro-520d5/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-04-16T12:27:57.630Z] Failed docker command with error  HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Not Found","status":404}
+[debug] [2024-04-16T12:27:57.736Z] >>> [apiv2][query] GET https://us.gcr.io/v2/partnerpro-520d5/gcf/us-central1/tags/list [none]
+[debug] [2024-04-16T12:27:58.147Z] <<< [apiv2][status] GET https://us.gcr.io/v2/partnerpro-520d5/gcf/us-central1/tags/list 404
+[debug] [2024-04-16T12:27:58.148Z] <<< [apiv2][body] GET https://us.gcr.io/v2/partnerpro-520d5/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-04-16T12:27:58.148Z] Failed docker command with error  HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Not Found","status":404}
+[warn] !  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/partnerpro-520d5/us/gcf 
+[debug] [2024-04-16T12:27:58.152Z] Functions deploy failed.
+[debug] [2024-04-16T12:27:58.152Z] {
+  "endpoint": {
+    "id": "api",
+    "project": "partnerpro-520d5",
+    "region": "us-central1",
+    "entryPoint": "api",
+    "platform": "gcfv1",
+    "runtime": "nodejs20",
+    "httpsTrigger": {},
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "vpc": null,
+    "environmentVariables": {
+      "API_PORT": "5005",
+      "FIREBASE_CONFIG": "{\"projectId\":\"partnerpro-520d5\",\"storageBucket\":\"partnerpro-520d5.appspot.com\",\"locationId\":\"us-central\"}",
+      "GCLOUD_PROJECT": "partnerpro-520d5",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/partnerpro-520d5/locations/us-central1/functions/api"
+    },
+    "codebase": "default",
+    "targetedByOnly": false,
+    "hash": "1e3b622cd7fccfaece0d16fa03de3fd8e2542d6d",
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    }
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/partnerpro-520d5/locations/us-central1/functions/api"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/partnerpro-520d5/locations/us-central1/functions/api",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 403,
+            "message": "Unable to retrieve the repository metadata for projects/partnerpro-520d5/locations/us-central1/repositories/gcf-artifacts. Ensure that the Cloud Functions service account has 'artifactregistry.repositories.list' and 'artifactregistry.repositories.get' permissions. You can add the permissions by granting the role 'roles/artifactregistry.reader'.",
+            "status": "PERMISSION_DENIED"
+          }
+        },
+        "response": {
+          "statusCode": 403
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 403, Unable to retrieve the repository metadata for projects/partnerpro-520d5/locations/us-central1/repositories/gcf-artifacts. Ensure that the Cloud Functions service account has 'artifactregistry.repositories.list' and 'artifactregistry.repositories.get' permissions. You can add the permissions by granting the role 'roles/artifactregistry.reader'.",
+      "status": 403
+    },
+    "status": 403,
+    "code": 403
+  }
+}
+[debug] [2024-04-16T12:27:58.294Z] Error: Failed to create function api in region us-central1
+    at C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:51:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV1Function (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:181:32)
+    at async Fabricator.createEndpoint (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:133:13)
+    at async handle (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:88:17)
+[error] 
+[error] Error: There was an error deploying functions
